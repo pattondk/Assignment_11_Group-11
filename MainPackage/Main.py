@@ -13,10 +13,11 @@ import requests
 response = requests.get('https://api.nal.usda.gov/fdc/v1/foods/search?query=apple&pageSize=2&api_key=XN9jws7B0PKQGDqBWuhde8MqvJgV2Y8xo8Oj8XKp')
 json_string = response.content
     
-parsed_json = json.loads(json_string) # Now we have a python dictionary
+parsed_json = json.loads(json_string) # This creates a python dictionary 
   
-print(parsed_json) 
-print(parsed_json['totalHits'])
+print(parsed_json) #Calls all data relating to "apples" from the API
+print(parsed_json['totalHits']) #Calls all of the instances of "apple" in the API
+print(parsed_json['foodSearchCriteria']) #Calls all query criteria for "apple"
 
     
 #for park in parsed_json['data']:
