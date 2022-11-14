@@ -16,9 +16,15 @@ json_string = response.content
 parsed_json = json.loads(json_string) # This creates a python dictionary 
   
 print(parsed_json) #Calls all data relating to "apples" from the API
-print(parsed_json['totalHits']) #Calls all of the instances of "apple" in the API
-print(parsed_json['foodSearchCriteria']) #Calls all query criteria for "apple"
+print("Your current search criteria are", parsed_json['foodSearchCriteria']) #Calls all query criteria for "apple"
+print("The total number of results for Apples is", parsed_json['totalHits']) #Calls all of the instances of "apple" in the API
 
-    
-#for park in parsed_json['data']:
-    #print (park)
+print(parsed_json['foods'])
+
+FoodInformation = parsed_json['foods']
+print(type(FoodInformation))
+for food in FoodInformation['foods']:
+        print(parsed_json(-7:1))
+        
+#for ingredients in parsed_json['foods']:
+    #print(ingredients)   
