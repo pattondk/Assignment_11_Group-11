@@ -19,12 +19,12 @@ print(parsed_json) #Calls all data relating to "apples" from the API
 print("Your current search criteria are", parsed_json['foodSearchCriteria']) #Calls all query criteria for "apple"
 print("The total number of results for Apples is", parsed_json['totalHits']) #Calls all of the instances of "apple" in the API
 
-print(parsed_json['foods'])
+print('The current Data on Apples is',parsed_json['foods'])
 
-FoodInformation = parsed_json['foods']
-print(type(FoodInformation))
-for food in FoodInformation['foods']:
-        print(parsed_json(-7:1))
+#FoodInformation = parsed_json['foods']
+#print(type(FoodInformation))
+#for food in FoodInformation['foods']:
+        #print(parsed_json(-7:1))
         
 #for ingredients in parsed_json['foods']:
     #print(ingredients)   
